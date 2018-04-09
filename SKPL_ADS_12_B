@@ -31,7 +31,13 @@ Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
 3.	Deskripsi Kebutuhan
 3.1	Kebutuhan Antarmuka Eksternal
 3.1.1	Antarmuka pemakai
-Bisa dilihat pada alamat G-drive yang telah ada
+User Interface yang digunakan untuk mengoperasikan Sistem Informasi ini antara lain :
+	- Tampilan login.
+	- Tampilan halaman utama.
+	- Tampilan Daftar Pekerjaan.
+	- Tampilan Form Pencarian Pekerjaan.
+(Bisa dilihat pada alamat G-drive yang telah ada)
+
 3.1.2	Antar muka perangkat keras
 3.1.3	Antar muka perangkat lunak
 3.1.4	Antarmuka komunikasi
