@@ -1,0 +1,82 @@
+1.	Pendahuluan
+1.1	Tujuan Penulisan Dokumen
+1.2	Lingkup Masalah
+1.3	Definisi, Istilah dan Singkatan
+1.4	Aturan Penomoran
+1.5	Refrensi
+1.6	Deskripsi umum Dokumen (Ikhtisar)
+2.	Deskripsi Umum Perangkat Lunak
+2.1	Deskripsi Umum Sistem
+System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik Informatika Universitas Negeri Malang berdasarkan set skill yang telah diambil, dimana Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang dapat melihat list lowongan pekerjaan berdasarkan hasil rekomendasi jenis pekerjaan, dimana list lowongan pekerjaan tersebut telah dikelompokkan berdasarkan kategorinya (contoh: perusahaan, instansi, kemitraan, dst)
+2.2	Karakteristik Pengguna
+
+2.3	Batasan
+Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
+-	Data yang digunakan dalam proses perhitungan hanyalah data nilai yang didapat dari PTIK Universitas Negeri Malang, dan tidak ada tambahan lain
+-	Sistem ditujukan hanya kepada mahasiswa Prodi Teknik Informatika Universitas Negeri Malang
+2.4	Ligkungan Operasi
+
+3.	Deskripsi Kebutuhan
+3.1	Kebutuhan Antarmuka Eksternal
+3.1.1	Antarmuka pemakai
+Bisa dilihat pada alamat G-drive yang telah ada
+3.1.2	Antar muka perangkat keras
+3.1.3	Antar muka perangkat lunak
+3.1.4	Antarmuka komunikasi
+3.2	Kebutuhan Fungsional
+3.2.1	Diagram Konteks
+3.2.2	DFD Level
+3.2.3	Spesifikasi Proses
+3.2.4	Data Store
+3.3	Kebutuhan Data
+3.3.1	E-R Diagram
+3.4	Kebutuhan Non-Fungsional
+3.5	Batasan Perancangan
+3.6	Keruntutan (traceability)
+3.6.1	Data Store vs E-R
+3.7	Ringkasan Kebutuhan
+3.7.1	Kebutuhan Fungsional
+Kebutuhan Fungsional system ini meliputi:
+-	System dapat terhubung dengan data nilai dari PTIK Universitas Negeri Malang
+-	System dapat me-record data alumni Jurusan teknik Informatika Universitas Negeri Malang
+-	System dapat me-ranking persentase kecocokan pekerjaan berdasarkan data nilai set skill yang telah diambil oleh pengguna
+-	System dapat memberikan informasi lowongan pekerjaan yang sesuai dengan jenis pekerjaan yang ditampilkan
+-	System dapat merekam input data pengguna (NIM dan Nama)
+-	System terintegrasi dengan situs penyedia lowongan pekerjaan
+
+3.7.2	Kebutuhan Non-Fungsional
+Kebutuhan Non-Fungsional dari system ini meliputi:
+-	System dapat dijalankansi seluruh web browser
+-	Memiliki tampilan yang sederhana dan mudah untuk difahami
+-	System menggunakan tampilan web responsive
+-	Pengamanan system menggunakan fitur TLS dan SSL
+-	Proses perhitungan data untuk tampilan persentase kecocokan dikerjakan tidak lebih dari 5 detik
+-	System dapat menjaga privasi user.
+
+> Tugas 2
+-	Nama Project	:	System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik Informatika Universitas Negeri Malang berdasarkan set skill yang telah diambil 
+-	Project Sponsor	:	Konsultan P2BKM Universitas Negeri Malang
+-	Business Needs	:	-	Mengurangi peluang kesalahan pengambilan keputusan pemilihan bidang kerja dengan set skill yang telah diambil.
+-	Mengurangi kebingungan lulusan Teknik Informatika UM untuk mencari pekerjaan dan jenis pekerjaan
+-	Business Requirements	:	-	Informasi retting bidang pekerjaan sesuai dengan set skill yag telah diambil
+-	Persentase kecocokan dan ulasan pendukung hingga memunculkan kecocokan tersebut
+-	Fasilitas informasi lowongan pekerjaan berdasarkan jenis pekerjaan yang ditampilkan, dimana lowongan pekerjaan tersebut disajikan berdasarkan kategori (contoh: perusahaan, pabrik, instansi)
+-	Business Value	:	-	Meningkatkan rasa percaya diri mahasiswa dalam mendaftar pekerjaan
+-	Mahasiswa bekerja sesuai set skill yang telah dipelajari dalam bangku kuliah
+-	Memberi bahan pertimbangan mahasiswa dalam memilih bidang kerja 
+-	Special issues	:	-	System dibangun berdasarkan teknologi web responsive 
+-	System dapat dijalankan pada seluruh web browser. 
+
+> Tugas 3
+Use case name 	: Melihat Lowongan Pekerjaan
+-	Actor	:	Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang
+-	Description	:	Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang dapat melihat list lowongan pekerjaan berdasarkan hasil rekomendasi jenis pekerjaan, dimana list lowongan pekerjaan tersebut telah dikelompokkan berdasarkan kategorinya (contoh: perusahaan, instansi, kemitraan, dst)
+-	Trigger	:	Mahasiswa ingin melihat lowongan pekerjaan yang tersedia berdasarkan jenis pekerjaan yang sudah direkomendasikan
+-	Type	:	external
+-	Precondition	:	-	Mahasiswa berada di menu rekomendasi kategori pekerjaan
+-	Penyimpanan data lowongan pekerjaan up-to-date dan online
+-	Normal Course	:	Melihat lowongan pekerjaan yang tersedia
+-	Mahasiswa men-klik salah satu rekomendasi pekerjaan
+-	Post Condition	:	System menampilkan list lowongan pekerjaan berdasarkan jenis pekerjaan yang dipilih, dimana list lowongan pekerjaan tersebut teah dikelompokkan berdasarkan kategori
+-	Exceptions	:	-	System menampilkan pop up “lowongan pekerjaan tidak tersedia”
+-	Browser menampilkan tulisan request time-out
