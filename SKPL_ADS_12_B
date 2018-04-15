@@ -33,6 +33,8 @@ Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
 
 3.	Deskripsi Kebutuhan
 3.1	Kebutuhan Antarmuka Eksternal
+Sistem Informasi Pendukung Keputusan Penentu Pekerjaan membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut : 
+
 3.1.1	Antarmuka pemakai
 User Interface yang digunakan untuk mengoperasikan Sistem Informasi ini antara lain :
 	- Tampilan login.
@@ -53,9 +55,17 @@ User Interface yang digunakan untuk mengoperasikan Sistem Informasi ini antara l
 3.3.1	E-R Diagram
 3.4	Kebutuhan Non-Fungsional
 3.5	Batasan Perancangan
+Batasan perancangan yang dipakai dalam pengembangan Sistem Informasi Pendukung Keputusan Penentu Pekerjaan antara lain : 
+
+-	Tampilan web dibuat dengan menggunakan Photoshop dan Corel Draw.
+-	Text editor yang digunakan adalah Notepad++ dan/atau Sublime Text.
+-	Bahasa Pemrograman yang digunakan adalah PHP, MySQL dan HTML
+
 3.6	Keruntutan (traceability)
 3.6.1	Data Store vs E-R
 3.7	Ringkasan Kebutuhan
+Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional dan kebutuhan non fungsional.Kebutuhan ini mencerminkan semua hal yang harus dipenuhi, dan nantinya akan menjadi arahan untuk tahapan testing, karena pada dasarnya, semua kebutuhan harus dapat ditest. Berikut ini ringkasan semua kebutuhan Sistem Informasi Pendukung Keputusan Penentu Pekerjaan : 
+
 3.7.1	Kebutuhan Fungsional
 Kebutuhan Fungsional system ini meliputi:
 -	System dapat terhubung dengan data nilai dari PTIK Universitas Negeri Malang
