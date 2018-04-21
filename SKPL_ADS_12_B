@@ -1,6 +1,6 @@
 1.	Pendahuluan
 1.1	Tujuan Penulisan Dokumen
-Tujuan dari penulisan dokumen ini adalah membuat sistem informasi yang membantu lulusan Teknik Informatika Universitas Negeri Malang dalam mencari pekerjaan yang cocok dengan set skill yang telah diambil.
+Tujuan dari penulisan dokumen ini adalah menjabarkan spesifikasi kebutuhan khusus perangkat lunak yang akan dibangun yakni berupa sistem pendukung keputusan pemilihan bidang pekerjaan berdasarkan set skill yang telah diambil, dimana sistem ini ditujukan kepada mahasiswa lulusan teknik informatika universitas negeri malang. penjabaran spesifikasi perangkat lunak meliputi deskripsi umum mengenai perangkat lunak dan deskripsi kebutuhan perangkat lunak. adanya penjabaran dan penspesifikasian kebutuhan perangkat lunak sangat dibutuhkan dalam pembangunan sebuah perangkat lunak, khususnya bagi para pengembang dan pembangun perangkat lunak tersebut.
 
 1.2	Lingkup Masalah
 Pada saat ini banyak mahasiswa yang sudah lulus dari perguruan tinggi yang terkadang bingung setelah lulus akan ke mana. Salah satunya mereka bingung mencari pekerjaan yang cocok dengan dirinya. Hal ini disebabkan karena mereka tidak mengetahui skill apa yang dimiliki. Maka dari masalah tersebut kami membuat membuat dokumen ini yang diharapkan dapat membantu lulusan dalam memilih pekerjaan yang cocok dengan set skill yang dimiliki.
@@ -15,6 +15,12 @@ Use Case	  : Berisi tentang deskripsi sebuah interaksi antara 1 atau lebih aktor
 1.4	Aturan Penomoran
 1.5	Refrensi
 1.6	Deskripsi umum Dokumen (Ikhtisar)
+Dalam penyusuan dokumen SKPL ini terbagi dalam beberapa bagian besar diantaranya adalah pendahuluan, deskripsi umum perangkat lunak, dan deskripsi kebutuhan.
+Bagian pendahuluan berisi tujuan penulisan dokumen dimana dalam sub bab ini menjelaskan alasan mengapa dokumen ditulis, lingkupan masalah yang berisi pengertian dari perangkat lunak yang akan dibuat, definisi, istilah dan singkatan yang akan digunakan dalam dokumen, aturan penomoran tabel dan gambar, list refrensi yang digunakan sebgaai rujukan, dan ikhtisar dokumen.
+Bagian deskripsi umum perangkat lunak berisi deskripsi umum dari perangkat lunak yang akan dibuat, karakteristik pengguna, batasan-batasan yang dipakai, dan lingkup operasi yang telah ditentukan.
+Bagian deskripsi kebutuhand dalam dokumen ini meliputi kebutuha antar muka eksternal, kebutuhan fungsional yang digambarkan dengan menggunakan Data Flow Diagram (DFD), kebutuhan non-fugsional, kebutuhan data, batasan perancangan, keruntunan yang digambarkan berdasarkan mapping kebutuhan fungsional dengan proses pada DFD dan mapping data store DFD dengan Entity-Relational Diagram, dan ringkasan dari kebutuhan perangkat.
+
+
 2.	Deskripsi Umum Perangkat Lunak
 2.1	Deskripsi Umum Sistem
 System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik Informatika Universitas Negeri Malang berdasarkan set skill yang telah diambil, dimana Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang dapat melihat list lowongan pekerjaan berdasarkan hasil rekomendasi jenis pekerjaan, dimana list lowongan pekerjaan tersebut telah dikelompokkan berdasarkan kategorinya (contoh: perusahaan, instansi, kemitraan, dst)
@@ -30,6 +36,7 @@ Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
 -	Sistem ditujukan hanya kepada mahasiswa Prodi Teknik Informatika Universitas Negeri Malang
 
 2.4	Ligkungan Operasi
+
 
 3.	Deskripsi Kebutuhan
 3.1	Kebutuhan Antarmuka Eksternal
