@@ -54,6 +54,16 @@ User Interface yang digunakan untuk mengoperasikan Sistem Informasi ini antara l
 3.1.3	Antar muka perangkat lunak
 3.1.4	Antarmuka komunikasi
 3.2	Kebutuhan Fungsional
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Kebutuhan 												| Penjelasan																																								|
+|sistem dapat merekam input data pengguna							 	| setelah pengguna login dan melakukan pemrosesan nilai, sistem dapat merekam username dan password yang digunakan serta beberapa aktifitas yang telah dilakukan																					|
+|sistem dapat terhubung dengan data nilai dari PTIK UM 							| sistem telah menyimpan data nilai yang digunakan dalam pemrosesa, dimana data tersebut didapatkan dari PTIK UM dan diambil dari data nilai KRS. dengan adanya fasilitas ini pengguna tidak perlu input data niai untuk pemrosesan.													|
+|sistem dapat me-record data alumni jurusan TI UM 							| data alumni baik berupa nilai, atau jenis pekerjaan yang dilakukan setelah lulus akan dimanfaatkan oleh sistem sebagai data pembanding untuk menentukan jenis pekerjaan yang cocok. data alumni dapat didapatkan dari feedback mahasiswa apabila telah menggunaan sistem ini, atau meminta data dari petugas legalisir ijazah.	|
+|sistem dapat me-ranking persentase kecocokan data nilai dengan jenis pekerjaan 			| dalam pemrosesannya, sistem akan mencocokkan data set skill yang dimili oleh pengguna dengan data pembanding. diamana kecocokan paling tinggi akan memiliki persentase tinggi untuk pengguna dan direkomendasikan dalam urutan pertama												|
+|sistem dapat memberikan informasi lowongan kerja berdasarkan jenis yang direkomendasikan 		| setelah melakukan perankingan, sistem akan mencari 3 persentase tertinggi jenis pekerjaan dalam list lowongan pekerjaan yang ada. apabila jenis pekerjaan tersebut ada dalam list lowongan pekerjaan, sistem akan menampilkan nama-nama mitra kerja yang membuka lowongan. apabila tidak ada maka sistem akan menampilkan peringatan	|
+|sistem dapat terintegrasi dengan situs penyedia lowongan pekerjaan				 	| list lowongan pekerjaan dalam sistem ini akan bekerja sama dengan situs penyedia lowongan pekerjaan, sehingga admint tidak perlu memasukkan data secara manual, dan berita lowongan pekerjaan akan selalu uptodate.															|
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 3.2.1	Diagram Konteks
 3.2.2	DFD Level
 3.2.3	Spesifikasi Proses
@@ -61,6 +71,19 @@ User Interface yang digunakan untuk mengoperasikan Sistem Informasi ini antara l
 3.3	Kebutuhan Data
 3.3.1	E-R Diagram
 3.4	Kebutuhan Non-Fungsional
+-------------------------------------------------------------------------------------------------------------------------------------------------
+|Parameter 			| Kebutuhan 													|
+|Availability 			|														|
+|Reliability 			|														|
+|Portability 			| perangkat lunak dapay dijalankan di seluruh web browser 							|
+|Ergonomy 			| tampilan antar muka web sederhana, responsive, dan mudah difahami oleh pengguna 				|
+|Response time 			| proses perhitungan data untuk menampilkan persentase kecocokan dijalankan tidak lebih dari 5 detik 		|
+|Memory 			| N/A														|
+|Safety 			| N/A														|
+|Security 			| pengamanan sistem menggunkaan fitur TLS dan SSL, serta dapat menjaga privasi user				|
+|Others 1: Tampilan Logo 	| setiap layer harus mengandung logo UM dan logo perancang sistem (apabila ada) 				|
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
 3.5	Batasan Perancangan
 Batasan perancangan yang dipakai dalam pengembangan Sistem Informasi Pendukung Keputusan Penentu Pekerjaan antara lain : 
 
@@ -90,6 +113,7 @@ Kebutuhan Non-Fungsional dari system ini meliputi:
 -	Pengamanan system menggunakan fitur TLS dan SSL
 -	Proses perhitungan data untuk tampilan persentase kecocokan dikerjakan tidak lebih dari 5 detik
 -	System dapat menjaga privasi user.
+- 	Pemberian logo pada setiap layer web
 
 > Tugas 2
 -	Nama Project	:	System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik Informatika Universitas Negeri Malang berdasarkan set skill yang telah diambil 
