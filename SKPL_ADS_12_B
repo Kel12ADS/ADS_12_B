@@ -6,11 +6,11 @@ Tujuan dari penulisan dokumen ini adalah menjabarkan spesifikasi kebutuhan khusu
 Pada saat ini banyak mahasiswa yang sudah lulus dari perguruan tinggi yang terkadang bingung setelah lulus akan ke mana. Salah satunya mereka bingung mencari pekerjaan yang cocok dengan dirinya. Hal ini disebabkan karena mereka tidak mengetahui skill apa yang dimiliki. Maka dari masalah tersebut kami membuat membuat dokumen ini yang diharapkan dapat membantu lulusan dalam memilih pekerjaan yang cocok dengan set skill yang dimiliki.
 1.3	Definisi, Istilah dan Singkatan
 Berikut adalah definisi dari beberapa istilah dan singkatan yang terdapat pada SKPL ini : 
-ERD		      : Entity Relationship Diagram. Diagram yang menggambarkan entitas suatu objek beserta relasinya. 
-DFD 		    : Data Flow Diagram. Diagram yang menggambarkan aliran data. 
+ERD 		: Entity Relationship Diagram. Diagram yang menggambarkan entitas suatu objek beserta relasinya. 
+DFD 		: Data Flow Diagram. Diagram yang menggambarkan aliran data. 
 Interface 	: Antarmuka antara sistem informasi dan pengguna. 
-Data Store	: Tempat penyimpanan data.
-Use Case	  : Berisi tentang deskripsi sebuah interaksi antara 1 atau lebih aktor dengan sistem informasi.
+Data Store 	: Tempat penyimpanan data.
+Use Case 	: Berisi tentang deskripsi sebuah interaksi antara 1 atau lebih aktor dengan sistem informasi.
 
 1.4	Aturan Penomoran
 1.5	Refrensi
@@ -26,9 +26,11 @@ Bagian deskripsi kebutuhand dalam dokumen ini meliputi kebutuha antar muka ekste
 System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik Informatika Universitas Negeri Malang berdasarkan set skill yang telah diambil, dimana Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang dapat melihat list lowongan pekerjaan berdasarkan hasil rekomendasi jenis pekerjaan, dimana list lowongan pekerjaan tersebut telah dikelompokkan berdasarkan kategorinya (contoh: perusahaan, instansi, kemitraan, dst)
 
 2.2	Karakteristik Pengguna
-Kategori Pengguna | Tugas | Hak Akses ke aplikasi |
-Mahasiswa | Melihat hasil presentasi kecocokan pekerjaan | Sign in sebagai Mahasiswa |
-Admin | Memperbaharui data mahasiswa dan atribut penghitungan kecocokan | Sign in sebagai admin, control panel server, basis data. |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Kategori Pengguna 		| Tugas 								| Hak Akses ke aplikasi 					|
+| Mahasiswa 			| Melihat hasil presentasi kecocokan pekerjaan 				| Sign in sebagai Mahasiswa 					|
+| Admin 			| Memperbaharui data mahasiswa dan atribut penghitungan kecocokan 	| Sign in sebagai admin, control panel server, basis data. 	|
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2.3	Batasan
 Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
