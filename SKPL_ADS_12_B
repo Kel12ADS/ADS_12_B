@@ -13,7 +13,10 @@ Data Store 	: Tempat penyimpanan data.
 Use Case 	: Berisi tentang deskripsi sebuah interaksi antara 1 atau lebih aktor dengan sistem informasi.
 
 1.4	Aturan Penomoran
+Dalam dokumen ini, terdapat beberapa anturan penomoran yang dipakai. Untuk daftar penamaan perangkat lunak dijelaskan pada tabel di bawah ini:
+
 1.5	Refrensi
+
 1.6	Deskripsi umum Dokumen (Ikhtisar)
 Dalam penyusuan dokumen SKPL ini terbagi dalam beberapa bagian besar diantaranya adalah pendahuluan, deskripsi umum perangkat lunak, dan deskripsi kebutuhan.
 Bagian pendahuluan berisi tujuan penulisan dokumen dimana dalam sub bab ini menjelaskan alasan mengapa dokumen ditulis, lingkupan masalah yang berisi pengertian dari perangkat lunak yang akan dibuat, definisi, istilah dan singkatan yang akan digunakan dalam dokumen, aturan penomoran tabel dan gambar, list refrensi yang digunakan sebgaai rujukan, dan ikhtisar dokumen.
@@ -35,10 +38,35 @@ System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik
 2.3	Batasan
 Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
 -	Data yang digunakan dalam proses perhitungan hanyalah data nilai yang didapat dari PTIK Universitas Negeri Malang, dan tidak ada tambahan lain
--	Sistem ditujukan hanya kepada mahasiswa Prodi Teknik Informatika Universitas Negeri Malang
+-	Sistem ditujukan hanya kepada mahasiswa Prodi Teknik Informatika Universitas Negeri Malang yang sudah menempuh minimum sks.
 
 2.4	Ligkungan Operasi
+Sistem ini akan berfungsi dengan sepesifikasi:
+Server:
+Komputer dengan spesifikasi hardware minimal sebagai berikut:
+	- Processor Intel Pentium 4 3 Ghz
+	- 2 GB RAM
+	- 500 GB Hard Disk Drive utama
+	- 500 GB Hard Disk Drive backup
+	- VGA Card 256 MB
+Komputer yang minimal telah terinstall software sebagai berikut :
+	- Browser Google Chrome/Mozilla Firefox
+	- Apache HTTP Server
+	- Mail Server
+DBMS (Database Management System) minimal MySQL 5.0.20 ke atas
+Koneksi internet dengan bandwidth minimal 1 Mbps
+OS minimal Windows 2003 Server atau Ubuntu Server
 
+Client:
+Komputer dengan spesifikasi hardware minimal sebagai berikut :
+	- Processor Intel Pentium 4 2 Ghz
+	- 1 GB RAM
+	- 80 GB Hard Disk Drive
+	- VGA Card 64 MB
+Komputer yang minimal telah terinstall software sebagai berikut :
+	- Browser Google Chrome/Mozilla Firefox
+Koneksi internet dengan bandwidth minimal 128 Kbps
+OS minimal Windows XP ke atas atau Ubuntu 7.04 ke atas
 
 3.	Deskripsi Kebutuhan
 3.1	Kebutuhan Antarmuka Eksternal
