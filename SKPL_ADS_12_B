@@ -47,6 +47,8 @@ Dalam dokumen ini, terdapat beberapa anturan penomoran yang dipakai. Untuk dafta
 |---------------------------------------------------------------------------------------------------------------|
 
 1.5	Refrensi
+Dokumen ini memiliki beberapa referensi dalam pembuatannya, yaitu sebagai berikut:
+	-(?)
 
 1.6	Deskripsi umum Dokumen (Ikhtisar)
 Dalam penyusuan dokumen SKPL ini terbagi dalam beberapa bagian besar diantaranya adalah pendahuluan, deskripsi umum perangkat lunak, dan deskripsi kebutuhan.
@@ -60,12 +62,12 @@ Bagian deskripsi kebutuhand dalam dokumen ini meliputi kebutuha antar muka ekste
 System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik Informatika Universitas Negeri Malang berdasarkan set skill yang telah diambil, dimana Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang dapat melihat list lowongan pekerjaan berdasarkan hasil rekomendasi jenis pekerjaan, dimana list lowongan pekerjaan tersebut telah dikelompokkan berdasarkan kategorinya (contoh: perusahaan, instansi, kemitraan, dst)
 
 2.2	Karakteristik Pengguna
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kategori Pengguna 		| Tugas 								| Hak Akses ke aplikasi 					|
-|-------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------|
-| Mahasiswa 			| Melihat hasil presentasi kecocokan pekerjaan 				| Sign in sebagai Mahasiswa 					|
-| Admin 			| Memperbaharui data mahasiswa dan atribut penghitungan kecocokan 	| Sign in sebagai admin, control panel server, basis data. 	|
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Kategori Pengguna 		| Tugas 									| Hak Akses ke aplikasi 					|
+|-------------------------------|-------------------------------------------------------------------------------|---------------------------------------------------------------|
+| Mahasiswa 			| Melihat hasil presentasi kecocokan pekerjaan 					| Sign in sebagai Mahasiswa 					|
+| Admin 			| Memperbaharui data mahasiswa, data alumni dan atribut penghitungan kecocokan 	| Sign in sebagai admin, control panel server, basis data. 	|
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 2.3	Batasan
 Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
@@ -74,6 +76,7 @@ Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
 
 2.4	Ligkungan Operasi
 Sistem ini akan berfungsi dengan sepesifikasi:
+
 Server:
 Komputer dengan spesifikasi hardware minimal sebagai berikut:
 	- Processor Intel Pentium 4 3 Ghz
@@ -103,6 +106,7 @@ OS minimal Windows XP ke atas atau Ubuntu 7.04 ke atas
 3.	Deskripsi Kebutuhan
 3.1	Kebutuhan Antarmuka Eksternal
 Sistem Informasi Pendukung Keputusan Penentu Pekerjaan membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut : 
+
 3.1.1	Antarmuka pemakai
 User Interface yang digunakan untuk mengoperasikan Sistem Informasi ini antara lain :
 	- Tampilan login.
@@ -123,7 +127,7 @@ Antarmuka perangkat keras yang digunakan untuk mengoperasikan perangkat lunak an
 
 3.1.3	Antar muka perangkat lunak
 Antarmuka perangkat lunak yang digunakan oleh perangkat lunak ini adalah sebagai berikut:
-	- 
+	- (?)
 	
 3.1.4	Antarmuka komunikasi
 Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara lain:
@@ -146,8 +150,16 @@ Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara 
 3.2.2	DFD Level
 3.2.3	Spesifikasi Proses
 3.2.4	Data Store
+|---------------------------------------------------------------------------------------|
+|Data Store		|Deskripsi 							| 
+|-----------------------|---------------------------------------------------------------|
+|Data_mahasiswa		|berisi nilai mahasiswa yang berasal dari PTIK UM		|
+|Data_alumni		|berisi data alumni yang sudah bekerja di perusahaan		|
+|---------------------------------------------------------------------------------------|
+
 3.3	Kebutuhan Data
 3.3.1	E-R Diagram
+
 3.4	Kebutuhan Non-Fungsional
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |ID		|Parameter 			| Kebutuhan 																		|
@@ -170,9 +182,16 @@ Batasan perancangan yang dipakai dalam pengembangan Sistem Informasi Pendukung K
 	- Bahasa Pemrograman yang digunakan adalah PHP, MySQL dan HTML
 
 3.6	Keruntutan (traceability)
-3.6.1	Data Store vs E-R
+Suatu perangkat lunak yang baik memiliki kebutuhan fungsional yang dapat dirunut model analisisnya. Berikut ini adalah tabel yang berisi
+traceability dari hasil analisis kebutuhan perangkat lunak yang dibangun.
+
+3.6.1	Kebutuhan Fungsional vs Proses
+3.6.2	Data Store vs E-R
+
 3.7	Ringkasan Kebutuhan
-Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional dan kebutuhan non fungsional.Kebutuhan ini mencerminkan semua hal yang harus dipenuhi, dan nantinya akan menjadi arahan untuk tahapan testing, karena pada dasarnya, semua kebutuhan harus dapat ditest. Berikut ini ringkasan semua kebutuhan Sistem Informasi Pendukung Keputusan Penentu Pekerjaan : 
+Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional dan kebutuhan non fungsional.Kebutuhan ini 
+mencerminkan semua hal yang harus dipenuhi, dan nantinya akan menjadi arahan untuk tahapan testing, karena pada dasarnya, semua 
+kebutuhan harus dapat ditest. Berikut ini ringkasan semua kebutuhan Sistem Informasi Pendukung Keputusan Penentu Pekerjaan : 
 
 3.7.1	Kebutuhan Fungsional
 Kebutuhan Fungsional system ini meliputi:
