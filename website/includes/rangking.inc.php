@@ -2,7 +2,7 @@
 class Rangking{
 	
 	private $conn;
-	private $table_name = "wp_rangking";
+	private $table_name = "ADS12_rangking";
 	
 	public $ia;
 	public $ik;
@@ -54,7 +54,7 @@ class Rangking{
 	
 	function readKhusus(){
 
-		$query = "SELECT * FROM wp_alternatif a, wp_kriteria b, wp_rangking c where a.id_alternatif=c.id_alternatif and b.id_kriteria=c.id_kriteria order by a.id_alternatif asc";
+		$query = "SELECT * FROM ADS12_alternatif a, ADS12_kriteria b, ADS12_rangking c where a.id_alternatif=c.id_alternatif and b.id_kriteria=c.id_kriteria order by a.id_alternatif asc";
 		$stmt = $this->conn->prepare( $query );
 		$stmt->execute();
 		
@@ -63,7 +63,7 @@ class Rangking{
 	
 	function readR($a){
 
-		$query = "SELECT * FROM wp_alternatif a, wp_kriteria b, wp_rangking c, wp_bobot d where b.id_kriteria=d.id_kriteria and a.id_alternatif=c.id_alternatif and b.id_kriteria=c.id_kriteria and c.id_alternatif='$a'";
+		$query = "SELECT * FROM ADS12_alternatif a, ADS12_kriteria b, ADS12_rangking c, ADS12_bobot d where b.id_kriteria=d.id_kriteria and a.id_alternatif=c.id_alternatif and b.id_kriteria=c.id_kriteria and c.id_alternatif='$a'";
 		$stmt = $this->conn->prepare( $query );
 		$stmt->execute();
 		
@@ -72,7 +72,7 @@ class Rangking{
 	
 	function readMax(){
 		
-		$query = "SELECT sum(vektor_s) as mnr1 FROM wp_alternatif";
+		$query = "SELECT sum(vektor_s) as mnr1 FROM ADS12_alternatif";
 
 		$stmt = $this->conn->prepare( $query );
 		$stmt->execute();
@@ -161,7 +161,7 @@ class Rangking{
 	function normalisasi2(){
 
 		$query = "UPDATE 
-					wp_alternatif
+					ADS12_alternatif
 				SET 
 					vektor_s = :nn2,
 					vektor_v = :nn3
@@ -188,7 +188,7 @@ class Rangking{
 	function hasil1(){
 
 		$query = "UPDATE 
-					wp_alternatif
+					ADS12_alternatif
 				SET 
 					vektor_s = :has1
 				WHERE
@@ -210,7 +210,7 @@ class Rangking{
 	function hasil2(){
 
 		$query = "UPDATE 
-					wp_alternatif
+					ADS12_alternatif
 				SET 
 					vektor_v = :has2
 				WHERE

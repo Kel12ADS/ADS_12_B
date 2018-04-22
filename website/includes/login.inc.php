@@ -2,7 +2,7 @@
 class Login
 {
 	private $conn;
-	private $table_name = "wp_pengguna";
+	private $table_name = "ADS12_pengguna";
 	
     public $user;
     public $userid;

@@ -2,7 +2,7 @@
 class Config{
 	
 	private $host = "localhost";
-	private $db_name = "spk_wp";
+	private $db_name = "ads12";
 	private $username = "root";
 	private $password = "";
 	public $conn;

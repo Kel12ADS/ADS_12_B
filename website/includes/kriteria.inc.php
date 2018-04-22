@@ -2,7 +2,7 @@
 class Kriteria{
 	
 	private $conn;
-	private $table_name = "wp_kriteria";
+	private $table_name = "ADS12_kriteria";
 	
 	public $id;
 	public $kt;

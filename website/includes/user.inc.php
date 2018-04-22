@@ -2,8 +2,7 @@
 class User{
 	
 	private $conn;
-	private $table_name = "wp_pengguna";
-	private $table_name2 = "wp_mhs";
+	private $table_name = "ADS12_pengguna";
 	
 	public $id;
 	public $nl;
@@ -38,19 +37,6 @@ class User{
 		$stmt->execute();
 		
 		return $stmt;
-	}
-	
-	function readMhs(){
-
-		$query = "SELECT * FROM " . $this->table_name2 . " WHERE id_pengguna=? LIMIT 0,1";
-
-		$stmt = $this->conn->prepare( $query );
-		$stmt->bindParam(1, $this->id);
-		$stmt->execute();
-
-		$row = $stmt->fetch(PDO::FETCH_ASSOC);
-		
-		$this->nim = $row['nim_mhs'];
 	}
 	
 	// used when filling up the update product form

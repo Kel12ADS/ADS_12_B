@@ -2,7 +2,7 @@
 class Bobot{
 	
 	private $conn;
-	private $table_name = "wp_bobot";
+	private $table_name = "ADS12_bobot";
 	
 	public $id;
 	public $kt;
@@ -42,7 +42,7 @@ class Bobot{
 	
 	function readAll(){
 
-		$query = "SELECT * FROM ".$this->table_name." a, wp_kriteria b where a.id_kriteria=b.id_kriteria ORDER BY a.id_kriteria ASC";
+		$query = "SELECT * FROM ".$this->table_name." a, ADS12_kriteria b where a.id_kriteria=b.id_kriteria ORDER BY a.id_kriteria ASC";
 		$stmt = $this->conn->prepare( $query );
 		$stmt->execute();
 		

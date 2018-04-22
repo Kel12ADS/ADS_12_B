@@ -2,7 +2,7 @@
 class Alternatif{
 	
 	private $conn;
-	private $table_name = "wp_alternatif";
+	private $table_name = "ADS12_alternatif";
 	
 	public $id;
 	public $kt;
