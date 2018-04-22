@@ -24,6 +24,27 @@ Use Case 	: Berisi tentang deskripsi sebuah interaksi antara 1 atau lebih aktor 
 
 1.4	Aturan Penomoran
 Dalam dokumen ini, terdapat beberapa anturan penomoran yang dipakai. Untuk daftar penamaan perangkat lunak dijelaskan pada tabel di bawah ini:
+|---------------------------------------------------------------------------------------------------------------|
+| Nama-ID	 		| Aturan penamaan		| Deskripsi 					|
+|-------------------------------|-------------------------------|-----------------------------------------------|
+| Kebutuhan fungsional		| SRS-F-IN/PR/OUT-xxx		| SRS adalah System Requirement Summary		|
+|				|				| F adalah Fungsional				|
+|				|				| IN menunjukkan operasi Input			|
+|				|				| PR menunjukkan operasi Proses			|
+|				|				| OUT menunjukkan output			|
+|				|				| xxx adalah nomor SRS-Id			|
+|-------------------------------|-------------------------------|-----------------------------------------------|
+| Kebutuhan non fungsional	| SRS-NF-IN/PR/OUT-xxx		| SRS adalah System Requirement Summary		|
+|				|				| NF adalah non-Fungsional			|
+|				|				| IN menunjukkan operasi Input			|
+|				|				| PR menunjukkan operasi Proses			|
+|				|				| OUT menunjukkan operasi Output		|
+|				|				| xxx adalah nomor SRS-Id			|
+|-------------------------------|-------------------------------|-----------------------------------------------|
+| Bubble			| DFD-X-Y.Z			| DFD adalah Data Flow Diagram			|
+|				|				| X adalah nomor level diagram			|
+|				|				| Y.Z adalah nomer pada buble diagram		|
+|---------------------------------------------------------------------------------------------------------------|
 
 1.5	Refrensi
 
@@ -39,11 +60,12 @@ Bagian deskripsi kebutuhand dalam dokumen ini meliputi kebutuha antar muka ekste
 System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik Informatika Universitas Negeri Malang berdasarkan set skill yang telah diambil, dimana Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang dapat melihat list lowongan pekerjaan berdasarkan hasil rekomendasi jenis pekerjaan, dimana list lowongan pekerjaan tersebut telah dikelompokkan berdasarkan kategorinya (contoh: perusahaan, instansi, kemitraan, dst)
 
 2.2	Karakteristik Pengguna
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kategori Pengguna 		| Tugas 								| Hak Akses ke aplikasi 					|
+|-------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------|
 | Mahasiswa 			| Melihat hasil presentasi kecocokan pekerjaan 				| Sign in sebagai Mahasiswa 					|
 | Admin 			| Memperbaharui data mahasiswa dan atribut penghitungan kecocokan 	| Sign in sebagai admin, control panel server, basis data. 	|
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 2.3	Batasan
 Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
@@ -109,15 +131,16 @@ Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara 
 	- ASDL Modem
 	
 3.2	Kebutuhan Fungsional
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |ID		|Kebutuhan 											| Penjelasan																																								|
+|---------------|-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |SRS-F-IN-001	|sistem dapat merekam input data pengguna							| setelah pengguna login dan melakukan pemrosesan nilai, sistem dapat merekam username dan password yang digunakan serta beberapa aktifitas yang telah dilakukan																					|
 |SRS-F-IN-002	|sistem dapat terhubung dengan data nilai dari PTIK UM 						| sistem telah menyimpan data nilai yang digunakan dalam pemrosesa, dimana data tersebut didapatkan dari PTIK UM dan diambil dari data nilai KRS. dengan adanya fasilitas ini pengguna tidak perlu input data niai untuk pemrosesan.													|
 |SRS-F-PR-003	|sistem dapat me-record data alumni jurusan TI UM 						| data alumni baik berupa nilai, atau jenis pekerjaan yang dilakukan setelah lulus akan dimanfaatkan oleh sistem sebagai data pembanding untuk menentukan jenis pekerjaan yang cocok. data alumni dapat didapatkan dari feedback mahasiswa apabila telah menggunaan sistem ini, atau meminta data dari petugas legalisir ijazah.	|
 |SRS-F-PR-004	|sistem dapat me-ranking persentase kecocokan data nilai dengan jenis pekerjaan 		| dalam pemrosesannya, sistem akan mencocokkan data set skill yang dimili oleh pengguna dengan data pembanding. diamana kecocokan paling tinggi akan memiliki persentase tinggi untuk pengguna dan direkomendasikan dalam urutan pertama												|
 |SRS-F-OUT-005	|sistem dapat memberikan informasi lowongan kerja berdasarkan jenis yang direkomendasikan 	| setelah melakukan perankingan, sistem akan mencari 3 persentase tertinggi jenis pekerjaan dalam list lowongan pekerjaan yang ada. apabila jenis pekerjaan tersebut ada dalam list lowongan pekerjaan, sistem akan menampilkan nama-nama mitra kerja yang membuka lowongan. apabila tidak ada maka sistem akan menampilkan peringatan	|
 |SRS-F-IN-006	|sistem dapat terintegrasi dengan situs penyedia lowongan pekerjaan				| list lowongan pekerjaan dalam sistem ini akan bekerja sama dengan situs penyedia lowongan pekerjaan, sehingga admint tidak perlu memasukkan data secara manual, dan berita lowongan pekerjaan akan selalu uptodate.															|
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 3.2.1	Diagram Konteks
 3.2.2	DFD Level
@@ -126,8 +149,9 @@ Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara 
 3.3	Kebutuhan Data
 3.3.1	E-R Diagram
 3.4	Kebutuhan Non-Fungsional
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |ID		|Parameter 			| Kebutuhan 																		|
+|---------------|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 |SRS-NF-OUT-007	|Availability 			| Perangkat Lunak harus terus dapat beroperasi 7 hari perminggu, 24 jam per hari tanpa gagal								|
 |SRS-NF-PR-008	|Reliability 			| Kegagalan dalam proses persentase kecocokan data nilai dengan jenis pekerjaan memiliki toleransi satu kali gagal dalam sepuluh kali perhitungan	|
 |SRS-NF-PR-009	|Portability 			| perangkat lunak dapay dijalankan di seluruh web browser 												|
@@ -137,14 +161,13 @@ Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara 
 |		|Safety 			| N/A																			|
 |SRS-NF-PR-012	|Security 			| pengamanan sistem menggunkaan fitur TLS dan SSL, serta dapat menjaga privasi user									|
 |SRS-NF-OUT-013	|Others 1: Tampilan Logo 	| setiap layer harus mengandung logo UM dan logo perancang sistem (apabila ada) 									|
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 3.5	Batasan Perancangan
 Batasan perancangan yang dipakai dalam pengembangan Sistem Informasi Pendukung Keputusan Penentu Pekerjaan antara lain : 
-
--	Tampilan web dibuat dengan menggunakan Photoshop dan Corel Draw.
--	Text editor yang digunakan adalah Notepad++ dan/atau Sublime Text.
--	Bahasa Pemrograman yang digunakan adalah PHP, MySQL dan HTML
+	- Tampilan web dibuat dengan menggunakan Photoshop dan Corel Draw.
+	- Text editor yang digunakan adalah Notepad++ dan/atau Sublime Text.
+	- Bahasa Pemrograman yang digunakan adalah PHP, MySQL dan HTML
 
 3.6	Keruntutan (traceability)
 3.6.1	Data Store vs E-R
