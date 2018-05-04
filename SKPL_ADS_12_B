@@ -147,7 +147,21 @@ Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara 
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 3.2.1	Diagram Konteks
+Berikut adalah gambar Diagram Konteks dari Sistem Informasi Pendukung Keputusan Penentu Pekerjaan : 
+https://drive.google.com/open?id=1giwty7ME_ofMwDgWL8ACB6Z-G6FpRuSd
+
 3.2.2	DFD Level
+Adapun gambar DFD tiap level dari Sistem Informasi Pendukung Keputusan Penentu Pekerjaan adalah sebagai berikut :
+
+	- Level 1
+	https://drive.google.com/open?id=1LoUKhOwn0_0moXvSzYrF1YU2pKd5yHZu
+	- Level 2 (Melihat Lowongan)
+	https://drive.google.com/open?id=1HhxvTFneNniSfPdy7DjzVVdqmoCSsEVk
+	- Level 2 (Rekam Data Pengguna)
+	https://drive.google.com/open?id=1B0vZAlIoZHBTnMgyXhEdvYeV4emRSQUa
+	- Level 2 (Pencocokan Jenis Pekerjaan)
+	https://drive.google.com/open?id=1DhRgGgUvxM3FDJV4Q6xwtpUuLdAadjpL
+	
 3.2.3	Spesifikasi Proses
 3.2.4	Data Store
 |---------------------------------------------------------------------------------------|
