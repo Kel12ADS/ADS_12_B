@@ -148,19 +148,21 @@ Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara 
 
 3.2.1	Diagram Konteks
 Berikut adalah gambar Diagram Konteks dari Sistem Informasi Pendukung Keputusan Penentu Pekerjaan : 
-https://drive.google.com/open?id=1giwty7ME_ofMwDgWL8ACB6Z-G6FpRuSd
+https://drive.google.com/file/d/1QOkklNjypGZi8l2M9dYYf-RLmSfo9J4m/view?usp=sharing
 
 3.2.2	DFD Level
 Adapun gambar DFD tiap level dari Sistem Informasi Pendukung Keputusan Penentu Pekerjaan adalah sebagai berikut :
 
 	- Level 1
-	https://drive.google.com/open?id=1LoUKhOwn0_0moXvSzYrF1YU2pKd5yHZu
-	- Level 2 (Melihat Lowongan)
-	https://drive.google.com/open?id=1HhxvTFneNniSfPdy7DjzVVdqmoCSsEVk
-	- Level 2 (Rekam Data Pengguna)
-	https://drive.google.com/open?id=1B0vZAlIoZHBTnMgyXhEdvYeV4emRSQUa
-	- Level 2 (Pencocokan Jenis Pekerjaan)
-	https://drive.google.com/open?id=1DhRgGgUvxM3FDJV4Q6xwtpUuLdAadjpL
+	https://drive.google.com/file/d/19vasLjPRYsl72y4UwllebL2owiXsgpuM/view?usp=sharing
+	- Level 2 (Update data alumni)
+	https://drive.google.com/file/d/1SzzRuTUVkOnpVkU-Li3DCz2VNU6aZSHZ/view?usp=sharing
+	- Level 2 (Proses Lihat jenis pekerjaan dan pencocokan)
+	https://drive.google.com/file/d/1CoQQZanXdPnr4QIwpKjdPXAN4RbiIIPa/view?usp=sharing
+	- Level 2 (proses lihat lowongan pekerjaan)
+	https://drive.google.com/file/d/1LEf3oFu34zMVa2tyFyDfpBD5SIQVdM5f/view?usp=sharing
+	- Level 2 (Generate Laporan)
+	https://drive.google.com/file/d/1ZI1ufBMFQiY6vGM4OmskTRdfeXRuHrT8/view?usp=sharing
 	
 3.2.3	Spesifikasi Proses
 ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
@@ -243,31 +245,3 @@ Kebutuhan Non-Fungsional dari system ini meliputi:
 -	Proses perhitungan data untuk tampilan persentase kecocokan dikerjakan tidak lebih dari 5 detik
 -	System dapat menjaga privasi user.
 - 	Pemberian logo pada setiap layer web
-
-> Tugas 2
--	Nama Project	:	System informasi pendukung keputusan pemilihan bidang kerja untuk lulusan Teknik Informatika Universitas Negeri Malang berdasarkan set skill yang telah diambil 
--	Project Sponsor	:	Konsultan P2BKM Universitas Negeri Malang
--	Business Needs	:	-	Mengurangi peluang kesalahan pengambilan keputusan pemilihan bidang kerja dengan set skill yang telah diambil.
--	Mengurangi kebingungan lulusan Teknik Informatika UM untuk mencari pekerjaan dan jenis pekerjaan
--	Business Requirements	:	-	Informasi retting bidang pekerjaan sesuai dengan set skill yag telah diambil
--	Persentase kecocokan dan ulasan pendukung hingga memunculkan kecocokan tersebut
--	Fasilitas informasi lowongan pekerjaan berdasarkan jenis pekerjaan yang ditampilkan, dimana lowongan pekerjaan tersebut disajikan berdasarkan kategori (contoh: perusahaan, pabrik, instansi)
--	Business Value	:	-	Meningkatkan rasa percaya diri mahasiswa dalam mendaftar pekerjaan
--	Mahasiswa bekerja sesuai set skill yang telah dipelajari dalam bangku kuliah
--	Memberi bahan pertimbangan mahasiswa dalam memilih bidang kerja 
--	Special issues	:	-	System dibangun berdasarkan teknologi web responsive 
--	System dapat dijalankan pada seluruh web browser. 
-
-> Tugas 3
-Use case name 	: Melihat Lowongan Pekerjaan
--	Actor	:	Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang
--	Description	:	Mahasiswa Jurusan Teknik Informatika Universitas Negeri Malang dapat melihat list lowongan pekerjaan berdasarkan hasil rekomendasi jenis pekerjaan, dimana list lowongan pekerjaan tersebut telah dikelompokkan berdasarkan kategorinya (contoh: perusahaan, instansi, kemitraan, dst)
--	Trigger	:	Mahasiswa ingin melihat lowongan pekerjaan yang tersedia berdasarkan jenis pekerjaan yang sudah direkomendasikan
--	Type	:	external
--	Precondition	:	-	Mahasiswa berada di menu rekomendasi kategori pekerjaan
--	Penyimpanan data lowongan pekerjaan up-to-date dan online
--	Normal Course	:	Melihat lowongan pekerjaan yang tersedia
--	Mahasiswa men-klik salah satu rekomendasi pekerjaan
--	Post Condition	:	System menampilkan list lowongan pekerjaan berdasarkan jenis pekerjaan yang dipilih, dimana list lowongan pekerjaan tersebut teah dikelompokkan berdasarkan kategori
--	Exceptions	:	-	System menampilkan pop up “lowongan pekerjaan tidak tersedia”
--	Browser menampilkan tulisan request time-out
