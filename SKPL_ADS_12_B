@@ -184,12 +184,14 @@ ________________________________________________________________________________
 |DFD-2-5.1	|untuk mengirim laporan dan menyampaikan laporan atas kerja sistem dan keberhasilan mencapai target, admin memiliki hak akses untuk mencetak dan melihat trafict kerja sistem. laporan ini diproses dari data store update data alumni khususnya penerimaan kerja, dan trafict pengguna sistem														|
 |_______________|_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________|
 3.2.4	Data Store
-|---------------------------------------------------------------------------------------|
-|Data Store		|Deskripsi 							| 
-|-----------------------|---------------------------------------------------------------|
-|Data_mahasiswa		|berisi nilai mahasiswa yang berasal dari PTIK UM		|
-|Data_alumni		|berisi data alumni yang sudah bekerja di perusahaan		|
-|---------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------|
+|Data Store		|Deskripsi 											| 
+|-----------------------|-----------------------------------------------------------------------------------------------|
+|Data_mahasiswa		|berisi identitas, nilai, status keaktifan mahasiswa,  yang berasal dari PTIK UM		|
+|Data_alumni		|berisi data alumni yang sudah bekerja di perusahaan						|
+|Data_jenis_pekerjaan	|berisi jenis pekerjaan yang sesuai dengan dataset nilai mahasiswa 				|
+|Data_Lowongan 		|berisi data lowongan pekerjaan yang tersedia pada SI Penyedia Lowongan Pekerjaan 		|
+|-----------------------------------------------------------------------------------------------------------------------|
 
 3.3	Kebutuhan Data
 3.3.1	E-R Diagram
