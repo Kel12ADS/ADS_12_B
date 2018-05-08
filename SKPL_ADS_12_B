@@ -222,7 +222,25 @@ Suatu perangkat lunak yang baik memiliki kebutuhan fungsional yang dapat dirunut
 traceability dari hasil analisis kebutuhan perangkat lunak yang dibangun.
 
 3.6.1	Kebutuhan Fungsional vs Proses
+-------------------------------------------------------------------------
+|ID Kebutuhan Fungsional 	| Nomor Proses pada DFD 		|
+|-----------------------------------------------------------------------|
+|SRS-F-IN-001 				|DFD-2-5.1, DFD-2-3.2, DFD-2-4.1|
+|SRS-F-IN-002				|DFD-2-3.1						|
+|SRS-F-PR-003				|DFD-2-2.1, DFD-2-2.2, DFD-2-2.3|
+|SRS-F-PR-004				|DFD-2-3.1, DFD-2-3.2		|
+|SRS-F-OUT-005				|DFD-2-4.1			|
+|SRS-F-IN-006				|DFD-2-4.2			|
+-------------------------------------------------------------------------
 3.6.2	Data Store vs E-R
+------------------------------------------------------------------------------------------------
+|data store 			| entity 						|relasi|
+------------------------------------------------------------------------------------------------
+|data_mahasiswa			|mahasiswa 						||
+|data_alumni			|mahasiswa yang telah lulus dan mendapat pekerjaan	||
+|data_jenis_pekerjaan		|||
+|data_lowongan			|||
+------------------------------------------------------------------------------------------------
 
 3.7	Ringkasan Kebutuhan
 Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional dan kebutuhan non fungsional.Kebutuhan ini 
