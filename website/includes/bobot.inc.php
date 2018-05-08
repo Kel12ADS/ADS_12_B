@@ -2,9 +2,11 @@
 class Bobot{
 	
 	private $conn;
-	private $table_name = "ADS12_bobot";
+	private $table_name = "ads12_bobot";
 	
 	public $id;
+	public $ib;
+	public $alt;
 	public $kt;
 	public $hs;
 	
@@ -14,7 +16,7 @@ class Bobot{
 	
 	function insert(){
 		
-		$query = "insert into ".$this->table_name." values(?,?,'')";
+		$query = "insert into ".$this->table_name." values(?,?,0)";
 		$stmt = $this->conn->prepare($query);
 		$stmt->bindParam(1, $this->id);
 		$stmt->bindParam(2, $this->kt);
@@ -22,6 +24,7 @@ class Bobot{
 		if($stmt->execute()){
 			return true;
 		}else{
+			print_r($this->conn->errorCode());
 			return false;
 		}
 		
@@ -42,7 +45,7 @@ class Bobot{
 	
 	function readAll(){
 
-		$query = "SELECT * FROM ".$this->table_name." a, ADS12_kriteria b where a.id_kriteria=b.id_kriteria ORDER BY a.id_kriteria ASC";
+		$query = "SELECT * FROM ".$this->table_name." a, ads12_kriteria b where a.id_kriteria=b.id_kriteria ORDER BY a.id_kriteria ASC";
 		$stmt = $this->conn->prepare( $query );
 		$stmt->execute();
 		
@@ -59,7 +62,7 @@ class Bobot{
 	
 	function readOne(){
 		
-		$query = "SELECT * FROM " . $this->table_name . " WHERE id_kriteria=? LIMIT 0,1";
+		$query = "SELECT * FROM " . $this->table_name . " WHERE id_bobot=? LIMIT 0,1";
 
 		$stmt = $this->conn->prepare( $query );
 		$stmt->bindParam(1, $this->id);
@@ -109,7 +112,7 @@ class Bobot{
 	// delete the product
 	function delete(){
 	
-		$query = "DELETE FROM " . $this->table_name . " WHERE id_kriteria = ?";
+		$query = "DELETE FROM " . $this->table_name . " WHERE id_bobot = ?";
 		
 		$stmt = $this->conn->prepare($query);
 		$stmt->bindParam(1, $this->id);

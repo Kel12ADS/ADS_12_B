@@ -2,11 +2,13 @@
 class Kriteria{
 	
 	private $conn;
-	private $table_name = "ADS12_kriteria";
+	private $table_name = "ads12_kriteria";
 	
 	public $id;
 	public $kt;
 	public $tp;
+	public $alt;
+	public $ktt;
 	
 	public function __construct($db){
 		$this->conn = $db;
@@ -16,7 +18,7 @@ class Kriteria{
 		
 		$query = "insert into ".$this->table_name." values('',?,?)";
 		$stmt = $this->conn->prepare($query);
-		$stmt->bindParam(1, $this->kt);
+		$stmt->bindParam(1, $this->ktt);
 		$stmt->bindParam(2, $this->tp);
 		
 		if($stmt->execute()){
@@ -35,6 +37,8 @@ class Kriteria{
 		
 		return $stmt;
 	}
+	
+	
 	function countAll(){
 
 		$query = "SELECT * FROM ".$this->table_name." ORDER BY id_kriteria ASC";

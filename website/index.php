@@ -1,12 +1,15 @@
 <?php
-include_once 'headermhs.php';
+include_once 'header.php';
+include_once 'includes/user.inc.php';
+$pgn0 = new User($db);
+$stmt9 = $pgn0->readNim();
 include_once 'includes/nilai.inc.php';
 $pro3 = new Nilai($db);
 $stmt3 = $pro3->readAll();
 include_once 'includes/alternatif.inc.php';
 $pro1 = new Alternatif($db);
-$stmt1 = $pro1->readAll();
-$stmt4 = $pro1->readAll();
+$stmt1 = $pro1->readOnly();
+$stmt4 = $pro1->readOnly();
 include_once 'includes/kriteria.inc.php';
 $pro2 = new Kriteria($db);
 $stmt2 = $pro2->readAll();
@@ -19,20 +22,26 @@ $stmt5 = $pro5->readAll();
 		  	<br/>
 		  	<div class="panel panel-default">
 			  <div class="panel-heading">
-			    <h3 class="panel-title">Profil</h3>
+			    <h3 class="panel-title">Input Data</h3>
 			  </div>
 			  <div class="panel-body">
-			  				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
+			    <ul class="nav nav-pills nav-stacked">
+				  <li role="presentation"><a href="nilai.php">Nilai</a></li>
+				  <li role="presentation"><a href="kriteria.php">Kriteria</a></li>
+				  <li role="presentation"><a href="alternatif.php">Alternatif</a></li>
+				</ul>
+			  </div>
+			</div>
+		  	<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Analisa Data</h3>
+			  </div>
+			  <div class="panel-body">
+			    <ul class="nav nav-pills nav-stacked">
+				  <li role="presentation"><a href="bobot.php">Bobot</a></li>
+				  <li role="presentation"><a href="rangking.php">Rangking</a></li>
+				  <li role="presentation"><a href="laporan.php">Laporan</a></li>
+				</ul>
 			  </div>
 			</div>
 		  </div>
@@ -41,17 +50,36 @@ $stmt5 = $pro5->readAll();
 		  </div>
 		</div>
 		<div class="row">
-		  <div class="col-xs-12 col-sm-12 col-md-12">
-			<div class="panel panel-default" style="margin-left: 425px;">
+		  <div class="col-xs-12 col-sm-12 col-md-4">
+			<div class="panel panel-default">
 			  <div class="panel-heading">
-			    <h3 class="panel-title text-center">Alternatif Pekerjaan</h3>
+			    <h3 class="panel-title">Nilai Preferensi</h3>
 			  </div>
-			  <div class="panel-body text-center">
+			  <div class="panel-body">
+			    <ol>
+			    	<?php
+					while ($row3 = $stmt3->fetch(PDO::FETCH_ASSOC)){
+					?>
+				  	<li><?php echo $row3['ket_nilai'] ?> (<?php echo $row3['jum_nilai'] ?>)</li>
+				  	<?php
+					}
+				  	?>
+				</ol>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-xs-12 col-sm-12 col-md-8">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Alternatif Produk</h3>
+			  </div>
+			  <div class="panel-body">
 			    <ol>
 			    	<?php
 					while ($row1 = $stmt1->fetch(PDO::FETCH_ASSOC)){
 					?>
-				  	<li><?php echo $row1['nama_alternatif'] ?></li>
+				  	<li><a style="color:#060;" href="https://id.jobsdb.com/ID/ID/Search/FindJobs?KeyOpt=COMPLEX&JSRV=1&RLRSF=1&JobCat=1&SearchFields=Positions,Companies&Key=<?php echo $row1['nama_alternatif'] ?>"><?php echo $row1['nama_alternatif'] ?></a></li>
 				  	<?php
 					}
 				  	?>

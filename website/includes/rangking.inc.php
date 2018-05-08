@@ -2,9 +2,14 @@
 class Rangking{
 	
 	private $conn;
-	private $table_name = "ADS12_rangking";
+	private $table_name = "ads12_rangking";
+	private $table_name2 = "ads12_pengguna";
 	
 	public $ia;
+	public $id;
+	public $nim;
+	public $rnim;
+	public $rnim2;
 	public $ik;
 	public $nn;
 	public $nn2;
@@ -14,22 +19,36 @@ class Rangking{
 	public $mnr2;
 	public $has1;
 	public $has2;
+	public $SESSION_ID;
 	
 	public function __construct($db){
 		$this->conn = $db;
+		$this->SESSION_ID = $_SESSION['id_pengguna'];
+	}
+	
+	function readNim(){
+
+		$query = "SELECT * FROM " . $this->table_name2 . " WHERE id_pengguna=".$this->SESSION_ID." LIMIT 0,1";
+
+		$stmt = $this->conn->prepare( $query );
+		$stmt->execute();
+		
+		return $stmt;
 	}
 	
 	function insert(){
 		
-		$query = "insert into ".$this->table_name." values(?,?,?,'')";
+		$query = "insert into ".$this->table_name." values(?,?,?,?,0)";
 		$stmt = $this->conn->prepare($query);
-		$stmt->bindParam(1, $this->ia);
-		$stmt->bindParam(2, $this->ik);
-		$stmt->bindParam(3, $this->nn);
+		$stmt->bindParam(1, $this->nim);
+		$stmt->bindParam(2, $this->ia);
+		$stmt->bindParam(3, $this->ik);
+		$stmt->bindParam(4, $this->nn);
 		
 		if($stmt->execute()){
 			return true;
 		}else{
+			print_r ($this->conn->errorCode());
 			return false;
 		}
 		
@@ -54,7 +73,16 @@ class Rangking{
 	
 	function readKhusus(){
 
-		$query = "SELECT * FROM ADS12_alternatif a, ADS12_kriteria b, ADS12_rangking c where a.id_alternatif=c.id_alternatif and b.id_kriteria=c.id_kriteria order by a.id_alternatif asc";
+		$query = "SELECT * FROM ads12_alternatif a, ads12_kriteria b, ads12_rangking c, ads12_pengguna d where a.id_alternatif=c.id_alternatif and b.id_kriteria=c.id_kriteria and d.id_pengguna=c.id_pengguna order by a.id_alternatif asc";
+		$stmt = $this->conn->prepare( $query );
+		$stmt->execute();
+		
+		return $stmt;
+	}
+	
+	function readOnly(){
+
+		$query = "SELECT * FROM ads12_alternatif a, ads12_kriteria b, ads12_rangking c, ads12_pengguna d where a.id_alternatif=c.id_alternatif and b.id_kriteria=c.id_kriteria and c.id_pengguna=".$this->SESSION_ID." and d.id_pengguna=c.id_pengguna order by a.id_alternatif asc";
 		$stmt = $this->conn->prepare( $query );
 		$stmt->execute();
 		
@@ -63,7 +91,7 @@ class Rangking{
 	
 	function readR($a){
 
-		$query = "SELECT * FROM ADS12_alternatif a, ADS12_kriteria b, ADS12_rangking c, ADS12_bobot d where b.id_kriteria=d.id_kriteria and a.id_alternatif=c.id_alternatif and b.id_kriteria=c.id_kriteria and c.id_alternatif='$a'";
+		$query = "SELECT * FROM ads12_alternatif a, ads12_kriteria b, ads12_rangking c, ads12_bobot d where b.id_kriteria=d.id_kriteria and a.id_alternatif=c.id_alternatif and a.id_pengguna=c.id_pengguna and b.id_kriteria=c.id_kriteria and c.id_alternatif='$a'";
 		$stmt = $this->conn->prepare( $query );
 		$stmt->execute();
 		
@@ -72,7 +100,7 @@ class Rangking{
 	
 	function readMax(){
 		
-		$query = "SELECT sum(vektor_s) as mnr1 FROM ADS12_alternatif";
+		$query = "SELECT sum(vektor_s) as mnr1 FROM ads12_alternatif";
 
 		$stmt = $this->conn->prepare( $query );
 		$stmt->execute();
@@ -142,7 +170,9 @@ class Rangking{
 				WHERE
 					id_alternatif = :ia 
 				AND
-					id_kriteria = :ik";
+					id_kriteria = :ik
+				AND 
+					id_pengguna = ".$this->SESSION_ID."";
 
 		$stmt = $this->conn->prepare($query);
 
@@ -161,14 +191,16 @@ class Rangking{
 	function normalisasi2(){
 
 		$query = "UPDATE 
-					ADS12_alternatif
+					ads12_alternatif
 				SET 
 					vektor_s = :nn2,
 					vektor_v = :nn3
 				WHERE
 					id_alternatif = :ia 
 				AND
-					id_kriteria = :ik";
+					id_kriteria = :ik
+				AND
+					id_pengguna = ".$this->SESSION_ID."";
 
 		$stmt = $this->conn->prepare($query);
 
@@ -188,11 +220,11 @@ class Rangking{
 	function hasil1(){
 
 		$query = "UPDATE 
-					ADS12_alternatif
+					ads12_alternatif
 				SET 
 					vektor_s = :has1
 				WHERE
-					id_alternatif = :ia";
+					id_alternatif = :ia AND id_pengguna = ".$this->SESSION_ID."";
 
 		$stmt = $this->conn->prepare($query);
 
@@ -210,11 +242,11 @@ class Rangking{
 	function hasil2(){
 
 		$query = "UPDATE 
-					ADS12_alternatif
+					ads12_alternatif
 				SET 
 					vektor_v = :has2
 				WHERE
-					id_alternatif = :ia";
+					id_alternatif = :ia AND id_pengguna = ".$this->SESSION_ID."";
 
 		$stmt = $this->conn->prepare($query);
 

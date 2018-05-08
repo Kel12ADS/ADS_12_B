@@ -2,7 +2,7 @@
 class Nilai{
 	
 	private $conn;
-	private $table_name = "ADS12_nilai";
+	private $table_name = "ads12_nilai";
 	
 	public $id;
 	public $kt;

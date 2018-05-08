@@ -2,25 +2,52 @@
 class User{
 	
 	private $conn;
-	private $table_name = "ADS12_pengguna";
+	private $table_name = "ads12_pengguna";
 	
 	public $id;
 	public $nl;
 	public $un;
 	public $pw;
 	public $nim;
+	public $SESSION_ID;
 	
 	public function __construct($db){
 		$this->conn = $db;
+		$this->SESSION_ID = $_SESSION['id_pengguna'];
 	}
 	
+	function readNim(){
+
+		$query = "SELECT * FROM " . $this->table_name . " WHERE id_pengguna=".$this->SESSION_ID." LIMIT 0,1";
+
+		$stmt = $this->conn->prepare( $query );
+		$stmt->execute();
+		
+		return $stmt;
+	}
 	function insert(){
 		
-		$query = "insert into ".$this->table_name." values('',?,?,?)";
+		$query = "insert into ".$this->table_name." values('',?,?,?,?)";
 		$stmt = $this->conn->prepare($query);
-		$stmt->bindParam(1, $this->nl);
-		$stmt->bindParam(2, $this->un);
-		$stmt->bindParam(3, $this->pw);
+		$stmt->bindParam(1, $this->nim);
+		$stmt->bindParam(2, $this->nl);
+		$stmt->bindParam(3, $this->un);
+		$stmt->bindParam(4, $this->pw);
+		
+		if($stmt->execute()){
+			return true;
+		}else{
+			print_r($stmt->errorInfo());
+			return false;
+		}
+		
+	}
+	
+	function insert_vektor(){
+		
+		$query = "insert into ads12_vektormhs (nim_mhs) values(?)";
+		$stmt = $this->conn->prepare($query);
+		$stmt->bindParam(1, $this->nim);
 		
 		if($stmt->execute()){
 			return true;
@@ -37,6 +64,19 @@ class User{
 		$stmt->execute();
 		
 		return $stmt;
+	}
+	
+	function readMhs(){
+
+		$query = "SELECT * FROM " . $this->table_name . " WHERE id_pengguna=? LIMIT 0,1";
+
+		$stmt = $this->conn->prepare( $query );
+		$stmt->bindParam(1, $this->id);
+		$stmt->execute();
+
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		
+		$this->nim = $row['nim_mhs'];
 	}
 	
 	// used when filling up the update product form
