@@ -75,7 +75,7 @@ Berikut adalah batasan-batasan yang diberikan untuk mendukung kerja sistem
 -	Sistem ditujukan hanya kepada mahasiswa Prodi Teknik Informatika Universitas Negeri Malang yang sudah menempuh minimum sks.
 
 2.4	Ligkungan Operasi
-Sistem ini akan berfungsi dengan sepesifikasi:
+Sistem ini akan berfungsi dengan sepesifikasi sebagai berikut:
 
 Server:
 Komputer dengan spesifikasi hardware minimal sebagai berikut:
@@ -106,7 +106,6 @@ OS minimal Windows XP ke atas atau Ubuntu 7.04 ke atas
 3.	Deskripsi Kebutuhan
 3.1	Kebutuhan Antarmuka Eksternal
 Sistem Informasi Pendukung Keputusan Penentu Pekerjaan membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut : 
-
 3.1.1	Antarmuka pemakai
 User Interface yang digunakan untuk mengoperasikan Sistem Informasi ini antara lain :
 	- Tampilan login.
@@ -225,12 +224,12 @@ traceability dari hasil analisis kebutuhan perangkat lunak yang dibangun.
 -------------------------------------------------------------------------
 |ID Kebutuhan Fungsional 	| Nomor Proses pada DFD 		|
 |-----------------------------------------------------------------------|
-|SRS-F-IN-001 				|DFD-2-5.1, DFD-2-3.2, DFD-2-4.1|
-|SRS-F-IN-002				|DFD-2-3.1						|
-|SRS-F-PR-003				|DFD-2-2.1, DFD-2-2.2, DFD-2-2.3|
-|SRS-F-PR-004				|DFD-2-3.1, DFD-2-3.2		|
-|SRS-F-OUT-005				|DFD-2-4.1			|
-|SRS-F-IN-006				|DFD-2-4.2			|
+|SRS-F-IN-001 			|DFD-2-5.1, DFD-2-3.2, DFD-2-4.1	|
+|SRS-F-IN-002			|DFD-2-3.1				|
+|SRS-F-PR-003			|DFD-2-2.1, DFD-2-2.2, DFD-2-2.3	|
+|SRS-F-PR-004			|DFD-2-3.1, DFD-2-3.2			|
+|SRS-F-OUT-005			|DFD-2-4.1				|
+|SRS-F-IN-006			|DFD-2-4.2				|
 -------------------------------------------------------------------------
 3.6.2	Data Store vs E-R
 ------------------------------------------------------------------------------------------------
