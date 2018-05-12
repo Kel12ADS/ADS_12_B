@@ -194,6 +194,8 @@ ________________________________________________________________________________
 
 3.3	Kebutuhan Data
 3.3.1	E-R Diagram
+tampilan untuk diagram ERD dapat dilihat pada alamat berikut
+https://drive.google.com/file/d/1Ptvhq4XRUHkAHmtYM7TPMeqRTzapQZoJ/view?usp=sharing
 
 3.4	Kebutuhan Non-Fungsional
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -232,14 +234,13 @@ traceability dari hasil analisis kebutuhan perangkat lunak yang dibangun.
 |SRS-F-IN-006			|DFD-2-4.2				|
 -------------------------------------------------------------------------
 3.6.2	Data Store vs E-R
-------------------------------------------------------------------------------------------------
-|data store 			| entity 						|relasi|
-------------------------------------------------------------------------------------------------
-|data_mahasiswa			|mahasiswa 						||
-|data_alumni			|mahasiswa yang telah lulus dan mendapat pekerjaan	||
-|data_jenis_pekerjaan		|||
-|data_lowongan			|||
-------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+|data store 			| entity 						|relasi			|
+-----------------------------------------------------------------------------------------------------------------
+|data_mahasiswa			|lowongan, alumni 					|mencari, mencocokkan	|
+|data_alumni			|Alumni, Mahasiswa					|-			|
+|data_lowongan			|Lowongan						|-			|
+-----------------------------------------------------------------------------------------------------------------
 
 3.7	Ringkasan Kebutuhan
 Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional dan kebutuhan non fungsional.Kebutuhan ini 
